@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Sign Up Form Alice</title>  
+    </head>
+    <body>
+        <div class="l-form">
+            <div class="shape1"></div>
+            <div class="shape2"></div>
+
+            <div class="form">
+                <img src="{% static 'img/authentication.svg' %}" alt="" class="form__img">
+
+                <form action="" class="form__content">
+                    <h1 class="form__title">Sign Up</h1>
+
+                    <div class="form__div form__div-one">
+                        <div class="form__icon">
+                            <i class='bx bx-user-circle'></i>
+                        </div>
+
+                        <div class="form__div-input">
+                            <label for="" class="form__label">Username</label>
+                            {{ form.username }}
+                        </div>
+                    </div>
+                    <div class="form__div">
+                        <div class="form__icon">
+                            <i class='bx bx-envelope' ></i>
+                        </div>
+                        
+                        <div class="form__div-input">
+                            <label for="email" class="form__label">Email</label>
+                            {{ form.email }}
+                        </div>
+                    </div>
+                    
+                    <div class="form__div">
+                        <div class="form__icon">
+                            <i class='bx bx-phone' ></i>
+                        </div>
+                        
+                        <div class="form__div-input">
+                            <label for="phone" class="form__label">Phone Number</label>
+                            {{ form.phone_number }}
+                        </div>
+                    </div>
+                    <div class="form__div">
+                        <div class="form__icon">
+                            <i class='bx bx-lock' ></i>
+                        </div>
+                    <div class="form__div-input">
+                        <label for="password" class="form__label">Password</label>
+                        {{ form.password1 }}
+                    </div>
+                </div>
+                <div class="form__div">
+                <div class="form__icon">
+                    <i class='bx bx-lock' ></i>
+                </div>
+                    <div class="form__div-input">
+                            <label for="password" class="form__label">Password Confrom</label>
+                            {{ form.password2 }}
+                    </div>
+                </div>
+                    
+                    <br>
+                    <input type="submit" class="form__button" value="Register">
+
+                    <div class="form__social">
+                        <span class="form__social-text">Or register with</span>
+
+                        <a href="https://google.com" class="form__social-icon"><i class='bx bxl-google' ></i></a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        
+    </body>
+</html>
